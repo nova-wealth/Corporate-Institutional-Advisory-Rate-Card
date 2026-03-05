@@ -7,7 +7,7 @@ const RateCardHeader = () => {
                 <img src={logo} alt="Nova Wealth" className="h-[6rem] md:h-[8rem] w-auto object-contain" />
                 <button
                     onClick={() => window.print()}
-                    className="bg-[#b6975a] hover:bg-[#a6864a] text-zinc-900 text-sm font-semibold py-2.5 px-6 rounded transition-colors whitespace-nowrap shadow-sm"
+                    className="bg-[#d4a843] hover:bg-[#c49a35] text-zinc-900 text-sm font-semibold py-2.5 px-6 rounded transition-colors whitespace-nowrap shadow-md"
                 >
                     Download PDF
                 </button>
