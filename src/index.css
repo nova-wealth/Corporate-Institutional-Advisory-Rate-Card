@@ -45,3 +45,87 @@ body {
   background-color: var(--color-background);
   color: var(--color-foreground);
 }
+
+/* ── Print Styles ── */
+@media print {
+
+  /* Force browsers to print background colors and images */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* Remove margins so content fills the page */
+  @page {
+    margin: 0.5in;
+    size: A4;
+  }
+
+  body {
+    font-size: 11pt;
+  }
+
+  /* Hide the Download PDF button when printing */
+  button {
+    display: none !important;
+  }
+
+  /* Ensure dark header background prints */
+  header {
+    background-color: #21293a !important;
+    color: white !important;
+  }
+
+  /* Ensure dark footer background prints */
+  footer {
+    background-color: #21293a !important;
+    color: #a1a1aa !important;
+    margin-top: 2rem !important;
+  }
+
+  /* Ensure logo is visible */
+  header img {
+    filter: none !important;
+    max-height: 5rem !important;
+  }
+
+  /* Ensure dark table headers print */
+  thead {
+    background-color: #21293a !important;
+    color: white !important;
+  }
+
+  thead th {
+    background-color: #21293a !important;
+    color: white !important;
+  }
+
+  /* Keep table rows from splitting across pages */
+  tr {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Keep sections together */
+  section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Ensure any dark background sections print correctly */
+  [class*="bg-"] {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Gold SVG icons should print */
+  svg {
+    color: #b6975a !important;
+  }
+
+  /* Timeline circles should print */
+  .group>div>div {
+    border-color: #21293a !important;
+  }
+}
