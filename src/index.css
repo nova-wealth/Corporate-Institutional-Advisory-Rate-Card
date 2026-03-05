@@ -46,6 +46,25 @@ body {
   color: var(--color-foreground);
 }
 
+/* Loading bar animation */
+@keyframes loading-bar {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 70%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-loading-bar {
+  animation: loading-bar 2s ease-in-out forwards;
+}
+
 /* ── Print Styles ── */
 @media print {
 
